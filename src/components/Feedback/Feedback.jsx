@@ -1,11 +1,9 @@
-
-import style from './Feedback.module.css'
+import style from './Feedback.module.css';
 
 const Feedback = ({feedback}) => {
     const totalFeedback = feedback.good + feedback.neutral + feedback.bad;
 const  positiveFeedback = totalFeedback ? 
 Math.round((feedback.good / totalFeedback) * 100) : 0;
-
 
 return totalFeedback > 0 ? (
     <div className={style.feedback}>
@@ -16,8 +14,6 @@ return totalFeedback > 0 ? (
         <p>Positive:  {positiveFeedback} %</p>
     </div>
 ) : (<p>No feedback yet</p>)
-
-
 };
 
 export default Feedback;

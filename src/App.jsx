@@ -4,7 +4,7 @@ import Options from './components/Options/Options'
 import  style from './App.module.css';
 
 const App = () => {
- const [feedback, setFeedback] = 
+  const [feedback, setFeedback] = 
   useState ( () => {
     const seveFeedback = localStorage.getItem('feedback');
     return seveFeedback ? JSON.parse(seveFeedback) : {
@@ -14,7 +14,6 @@ const App = () => {
 };
   });
     
-
 useEffect(() => {
     window.localStorage.setItem("feedback", JSON.stringify(feedback));
 }, [feedback]);
@@ -29,8 +28,6 @@ useEffect(() => {
 <Options feedback={feedback} 
 setFeedback={setFeedback}/>
 <Feedback feedback={feedback}/>
-
-
     </div>
   );
 };

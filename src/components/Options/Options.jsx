@@ -1,7 +1,6 @@
 import style from './Options.module.css'
 import { FaThumbsUp, FaMeh, FaThumbsDown, FaRedo } from 'react-icons/fa';
 
- 
 const Options = ({feedback, setFeedback}) => {
     const updateFeedback = feedbackType => {
         setFeedback(prevFeedback => ({
@@ -15,7 +14,6 @@ const Options = ({feedback, setFeedback}) => {
                 neutral: 0,
                 bad: 0});
         };
-
 
     return (
 <div className={style.options}>
