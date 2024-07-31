@@ -1,7 +1,7 @@
 import { useState, useEffect} from "react"
 import Feedback from './components/Feedback/Feedback'
 import Options from './components/Options/Options'
-import './App.module.css'
+import  style from './App.module.css';
 
 const App = () => {
  const [feedback, setFeedback] = 
@@ -20,7 +20,7 @@ useEffect(() => {
 }, [feedback]);
 
   return (
-    <>
+    <div className={style.App}>
   <h1>Sip Happens Café
   </h1>
   <p>Please leave your feedback about our service by selecting one of the options below.
@@ -31,7 +31,7 @@ setFeedback={setFeedback}/>
 <Feedback feedback={feedback}/>
 
 
-    </>
+    </div>
   );
 };
 

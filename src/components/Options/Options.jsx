@@ -1,4 +1,6 @@
 import style from './Options.module.css'
+import { FaThumbsUp, FaMeh, FaThumbsDown, FaRedo } from 'react-icons/fa';
+
  
 const Options = ({feedback, setFeedback}) => {
     const updateFeedback = feedbackType => {
@@ -16,11 +18,22 @@ const Options = ({feedback, setFeedback}) => {
 
 
     return (
-<div>
-    <button onClick={()=>updateFeedback('good')}>good</button>
-    <button onClick={()=>updateFeedback('neutral')}>neutral</button>
-    <button onClick={()=>updateFeedback('bad')}>bad</button>
-    <button onClick={resetFeedback}>Reset</button>
+<div className={style.options}>
+    <button onClick={()=>updateFeedback('good')}>
+    <FaThumbsUp />
+    <span>Good</span> 
+    </button>
+    <button onClick={()=>updateFeedback('neutral')}>
+    <FaMeh />
+    <span>Neutral</span>
+    </button>
+    <button onClick={()=>updateFeedback('bad')}>
+    <FaThumbsDown />
+    <span>Bad</span>
+    </button>
+    <button onClick={resetFeedback}> 
+        <FaRedo />
+    <span>Reset</span></button>
 </div>
     );
 };
