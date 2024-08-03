@@ -1,4 +1,5 @@
 import style from './Feedback.module.css';
+import Notification from '../Notification/Notification';
 
 const Feedback = ({feedback, totalFeedback, positiveFeedback}) => {
 
@@ -11,7 +12,9 @@ return totalFeedback > 0 ? (
         <p>Total: {totalFeedback}</p>
         <p>Positive:  {positiveFeedback} %</p>
     </div>
-) : (<p>No feedback yet</p>)
+) : (
+    <Notification message="No feedback yet" />
+)
 };
 
 export default Feedback;

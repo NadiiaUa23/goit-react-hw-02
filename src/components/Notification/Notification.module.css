@@ -1,0 +1,7 @@
+.notification {
+    color: rgba(205, 52, 52, 0.5);
+    /* Чорний текст з 50% прозорістю */
+    font-size: 1.2em;
+    text-align: center;
+    margin-top: 20px;
+}
