@@ -31,11 +31,15 @@ const resetFeedback = () => {
 
 const totalFeedback = feedback.good + feedback.neutral + feedback.bad;
 
+const positiveFeedback = totalFeedback
+    ? Math.round((feedback.good / totalFeedback) * 100)
+    : 0;
+
   return (
     <div className={style.App}>
 <Description />
 <Options updateFeedback={updateFeedback} resetFeedback={resetFeedback} totalFeedback={totalFeedback} />
-<Feedback feedback={feedback}/>
+<Feedback feedback={feedback} totalFeedback={totalFeedback} positiveFeedback={positiveFeedback}/>
     </div>
   );
 };
